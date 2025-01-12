@@ -20,6 +20,7 @@ class DynamicArray:
                     self.resize
                 self.array[i + 1] = self.array[i]
             self.array[index] = num
+            self.length += 1
 
     def resize(self):
         self.capacity = 2 * self.capacity
