@@ -11,12 +11,12 @@ class DynamicArray:
         self.length += 1
 
     def pushAtIndex(self, num, index):
-        if index == self.length:
+        if index == self.length - 1:
             self.push(num)
 
         if index in range(self.length):
-            for i in range(index, self.length):
-                self.array[index + 1] = self.array[index]
+            for i in range(index, self.length - 1):
+                self.array[i + 1] = self.array[i]
             self.array[index] = num
 
     def resize(self):
