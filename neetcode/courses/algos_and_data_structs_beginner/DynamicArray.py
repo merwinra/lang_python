@@ -15,7 +15,9 @@ class DynamicArray:
             self.push(num)
 
         if index in range(self.length):
-            for i in range(index, self.length - 1):
+            for i in range(index + 1, self.length - 1, -1):
+                if(i + 1 > self.capacity):
+                    self.resize
                 self.array[i + 1] = self.array[i]
             self.array[index] = num
 
